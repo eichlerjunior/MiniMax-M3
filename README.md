@@ -1,93 +1,74 @@
 <div align="center">
-  <picture>
-    <source srcset="figures/MiniMaxLogo-Dark.png" media="(prefers-color-scheme: dark)">
-      <img src="figures/MiniMaxLogo-Light.png" width="60%" alt="MiniMax">
-    </source>
-  </picture>
+  <img width="60%" src="figures/logo.svg" alt="MiniMax">
 </div>
 <hr>
 
-<div align="center" style="line-height: 1.4; font-size:16px; margin-top: 30px;">
-  Join Our
-  <a href="https://platform.minimaxi.com/docs/faq/contact-us" target="_blank" style="font-size:17px; margin: 2px;">
-    💬 WeChat
-  </a> |
-  <a href="https://discord.com/invite/DPC4AHFCBw" target="_blank" style="font-size:17px; margin: 2px;">
-    🧩 Discord
-  </a>
-  community.
-</div>
-<div align="center" style="line-height: 1.2; font-size:16px;">
-  <a href="https://agent.minimax.io/" target="_blank" style="display: inline-block; margin: 4px;">
-    MiniMax Agent
-  </a> |
-  <a href="https://platform.minimax.io/docs/guides/text-generation" target="_blank" style="display: inline-block; margin: 4px;">
-    ⚡️ API
-  </a> |
-  <a href="https://github.com/MiniMax-AI/MiniMax-MCP" style="display: inline-block; margin: 4px;">
-    MCP
-  </a> |
-  <a href="https://www.minimax.io" target="_blank" style="display: inline-block; margin: 4px;">
-    MiniMax Website
-  </a>
-</div>
-<div align="center" style="line-height: 1.2; font-size:16px; margin-bottom: 30px;">
-  <a href="https://huggingface.co/MiniMaxAI" target="_blank" style="margin: 2px;">
-    🤗 Hugging Face
-  </a> |
-  <a href="https://github.com/MiniMax-AI/MiniMax-M3" target="_blank" style="margin: 2px;">
-    🐙 GitHub
-  </a> |
-  <a href="https://www.modelscope.cn/organization/MiniMax" target="_blank" style="margin: 2px;">
-    🤖️ ModelScope
-  </a>
-</div>
+<p align="center">
+  <a href="https://agent.minimax.io/" target="_blank"><img src="https://img.shields.io/badge/MiniMax%20Agent-FF6C37?style=for-the-badge&logo=minimax&logoColor=white" alt="MiniMax Agent"></a>
+  <a href="https://platform.minimax.io/docs/guides/text-generation" target="_blank"><img src="https://img.shields.io/badge/API-FF6C37?style=for-the-badge&logo=minimax&logoColor=white" alt="API"></a>
+  <a href="https://www.minimax.io" target="_blank"><img src="https://img.shields.io/badge/MiniMax%20Website-FF6C37?style=for-the-badge&logo=minimax&logoColor=white" alt="MiniMax Website"></a>
+  <br>
+  <a href="https://modelscope.cn/organization/minimax" target="_blank" rel="noopener noreferrer"><img alt="ModelScope MiniMax AI" src="https://img.shields.io/badge/ModelScope-MiniMax%20AI-white?labelColor=%23EF3D5D"/></a>
+  <a href="https://platform.minimaxi.com/docs/faq/contact-us" target="_blank"><img src="https://img.shields.io/badge/WeChat-07C160?style=for-the-badge&logo=wechat&logoColor=white" alt="WeChat"></a>
+  <a href="https://discord.com/invite/DPC4AHFCBw" target="_blank"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+  <a href="https://huggingface.co/MiniMaxAI" target="_blank"><img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face"></a>
+  <a href="https://github.com/MiniMax-AI/MiniMax-M3" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+  <a href="https://arxiv.org/abs/2606.13392" target="_blank"><img src="https://img.shields.io/badge/arXiv-2606.13392-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="arXiv Paper"></a>
+  <a href="https://huggingface.co/MiniMaxAI/MiniMax-M3/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/badge/LICENSE-4CAF50?style=for-the-badge&logo=creativecommons&logoColor=white" alt="LICENSE"></a>
+</p>
 
-# MiniMax-M3 is Coming
+MiniMax-M3 is a native multimodal model with 1M context. It has ~428B parameters and ~23B activated parameters.
 
-**MiniMax-M3** is the next generation of the MiniMax series, building on the agent harness, software engineering, and professional-work foundations established by [MiniMax-M2.7](https://github.com/MiniMax-AI/MiniMax-M2.7). The model is not yet released — this repository exists so the community can share what they need next.
+**Highlights:**
+- **Native Multimodality:** M3 undergoes mixed-modality training from the very first step, enabling deeper semantic fusion across text, image, and video.
+- **Context Scaling via Sparse Attention:** M3 introduces MiniMax Sparse Attention (MSA) to improve long context efficiency. M3 delivers 9× prefill and 15× decode speedups compared to M2 at 1M context, reducing per-token compute to 1/20.
+- **Coding & Cowork Capability:** M3 achieves frontier-level performance across long-horizon agentic benchmarks, excelling in both coding and cowork.
 
-## We Want Your Feedback
 
-Before M3 lands, we are listening. If you are using **MiniMax-M2.7** (via the API, Agent, or locally) and have something to say about it, please tell us — every report directly shapes M3.
+<p align="center">
+  <img width="100%" src="figures/benchmark.jpeg">
+</p>
 
-We are especially interested in:
+## MiniMax Sparse Attention (MSA)
 
-- 🐛 **Bugs and regressions** — anything that broke, hallucinated, or behaved unexpectedly in M2.7.
-- 💡 **Capability requests** — what M2.7 still can't do well for your workload (agent harnesses, SWE, professional work, entertainment, multilingual, long context, tool use, …).
-- 📊 **Benchmark gaps** — public or internal evals where you would like to see M3 improve.
-- 🧰 **Deployment pain points** — issues with SGLang, vLLM, Transformers, ModelScope, NIM, or the API.
-- 🧠 **Agent / skill feedback** — anything you observed while building Agent Teams, Skills, or dynamic tool search on top of M2.7.
+M3 is powered by [**MiniMax Sparse Attention (MSA)**](https://github.com/MiniMax-AI/MSA), a high-performance sparse attention operator designed for million-token contexts. Compared with GQA, MSA dramatically reduces the attention compute and memory footprint while preserving model quality.
 
-### How to send feedback
+<p align="center">
+  <img width="100%" src="figures/efficiency_gqa_vs_msa.png" alt="GQA vs MSA Efficiency Comparison">
+</p>
 
-| Channel | Use for |
-|---|---|
-| [📮 Open an Issue](https://github.com/MiniMax-AI/MiniMax-M3/issues/new/choose) | Bugs, capability requests, M2.7 → M3 comparisons. Pick a template. |
-| [💬 WeChat](https://platform.minimaxi.com/docs/faq/contact-us) | Chinese-speaking community discussion. |
-| [🧩 Discord](https://discord.com/invite/DPC4AHFCBw) | English-speaking community discussion. |
-| [✉️ model@minimax.io](mailto:model@minimax.io) | Private feedback, partnership, or evaluation requests. |
+> 📄 Read the technical report: [arXiv:2606.13392](https://arxiv.org/abs/2606.13392) · [Hugging Face Papers](https://huggingface.co/papers/2606.13392)
 
-If you are reporting a bug from M2.7, please include:
-1. Which inference path you used (MiniMax API / Agent / SGLang / vLLM / Transformers / NIM / ModelScope).
-2. Inference parameters (`temperature`, `top_p`, `top_k`, system prompt).
-3. A minimal reproduction — prompt, expected output, actual output.
+## How to Use
 
-## In the Meantime — Use M2.7
+- [MiniMax Agent](https://agent.minimax.io/)
+- [MiniMax API](https://platform.minimax.io/)
 
-While M3 is in development, M2.7 remains our latest released model:
+M3 supports three reasoning modes through the `thinking` parameter:
+- **`enabled`** — Reasoning is always enabled.
+- **`adaptive`** — M3 automatically determines when additional reasoning is beneficial.
+- **`disabled`** — Reasoning is disabled to minimize latency and maximize throughput.
 
-- **MiniMax Agent**: https://agent.minimax.io/
-- **MiniMax API**: https://platform.minimax.io/
-- **Token Plan**: https://platform.minimax.io/subscribe/token-plan
-- **Weights & deployment guides**: [MiniMax-M2.7](https://github.com/MiniMax-AI/MiniMax-M2.7) (SGLang / vLLM / Transformers / ModelScope / NVIDIA NIM)
-- **Model card**: https://huggingface.co/MiniMaxAI/MiniMax-M2.7
+## Local Deployment
 
-Recommended inference parameters for M2.7: `temperature=1.0`, `top_p=0.95`, `top_k=40`.
+Download the model:
 
-## Stay Updated
+```bash
+hf download MiniMaxAI/MiniMax-M3 --local-dir MiniMax-M3
+```
 
-Watch this repository for the M3 announcement, release notes, weights, and deployment guides.
+We recommend the following inference frameworks (listed alphabetically) to serve the model:
+
+- [SGLang](https://docs.sglang.io/) - see  [SGLang cookbook](https://docs.sglang.io/cookbook/autoregressive/MiniMax/MiniMax-M3).
+
+- [vLLM](https://github.com/vllm-project/vllm) - see [vLLM recipes](https://recipes.vllm.ai/MiniMaxAI/MiniMax-M3).
+
+- [Transformers](https://github.com/huggingface/transformers) - see [Transformers docs](https://huggingface.co/docs/transformers/model_doc/minimax_m3_vl).
+
+
+### Inference Parameters
+
+We recommend the following parameters for best performance: `temperature=1.0`, `top_p=0.95`, `top_k=40`.
 
 ## Contact Us
 
