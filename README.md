@@ -57,7 +57,7 @@ Download the model:
 hf download MiniMaxAI/MiniMax-M3 --local-dir MiniMax-M3
 ```
 
-We recommend the following inference frameworks (listed alphabetically) to serve the model:
+We recommend the following inference frameworks to serve the model:
 
 - [SGLang](https://docs.sglang.io/) - see  [SGLang cookbook](https://docs.sglang.io/cookbook/autoregressive/MiniMax/MiniMax-M3).
 
